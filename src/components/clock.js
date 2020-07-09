@@ -7,13 +7,14 @@ class Clock extends Component {
         super(props)
     
         this.state = {
-            sesLen:1,
-            breakLen:2,
-            minutes:1,
+            sesLen:25,
+            breakLen:5,
+            minutes:25,
             seconds :0,
             play:false,
             reset:false,
-            break:false
+            break:false,
+            title:'Session'
         }
     }
    
@@ -75,6 +76,9 @@ class Clock extends Component {
         return (
             <div className="work-area">
                 <Settings />
+                <div className="title" >
+                    <input value={this.state.title} id="title"/>
+                </div>
                 <div className="clock-view">
                     <input readOnly value={this.displayTime('min')} className="time" id="min" />
                     <input readOnly value={this.displayTime('sec')} className="time" id="sec" />

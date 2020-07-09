@@ -60,8 +60,23 @@
   padding: 1rem;
   border-radius: 3rem;
   background-color: rgba(255, 255, 255, 0.596);
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
+
+#title {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  border: solid rgba(255, 255, 255, 0.596);
+  background-color: rgba(255, 255, 255, 0.596);
+  border-radius: 1rem;
+  width: 7em;
+  
+}
+.title {
+  margin-bottom: 1rem;
+}
+
 
 .setting-structure {
   display: flex;
@@ -90,13 +105,13 @@
 
 
 .button-container button {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.671);
   display: inline-block;
   font-size: 1rem;
   width: 2rem;
   height: 2rem;
   border-radius: 1rem;
-  border: solid white;
+  border: solid rgba(255, 255, 255, 0.671);
   margin: 1rem;
 }
 
