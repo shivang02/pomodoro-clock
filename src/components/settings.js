@@ -1,6 +1,11 @@
 import React, { Component } from 'react'
 
 class Settings extends Component {
+    constructor(props) {
+        super(props)
+
+    }
+    
     render() {
         return (
             <div className="set-time">
@@ -9,19 +14,19 @@ class Settings extends Component {
                         Session Length
                     </div>
                     <div className="button-container">
-                        <button>+</button>
-                        <p>~</p>
-                        <button>-</button>
+                        <button onClick={()=>this.props.incMe("ses")}>+</button>
+                        <p>{this.props.sesLen}</p>
+                        <button onClick={() => this.props.decMe("ses")}>-</button>
                     </div>
                 </div>
                 <div className="setting-structure">
                     <div className="setting-title">
-                        Session Length
+                        Break Length
                     </div>
                     <div className="button-container">
-                        <button>+</button>
-                        <p>~</p>
-                        <button>-</button>
+                        <button onClick={() => this.props.incMe("break")}>+</button>
+                        <p>{this.props.breakLen}</p>
+                        <button onClick={() => this.props.decMe("break")}>-</button>
                     </div>
                 </div>
             </div>
