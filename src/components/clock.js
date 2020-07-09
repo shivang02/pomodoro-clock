@@ -7,10 +7,13 @@ class Clock extends Component {
         super(props)
     
         this.state = {
-            minutes:25,
+            sesLen:1,
+            breakLen:2,
+            minutes:1,
             seconds :0,
             play:false,
-            reset:false
+            reset:false,
+            break:false
         }
     }
    
@@ -29,6 +32,11 @@ class Clock extends Component {
                     this.setState({
                         minutes:this.state.minutes-1
                     })
+                }
+                else {
+                    clearInterval(c);
+                    this.setState({break:!this.state.break})
+                    this.typeChecker()
                 } 
             }
         }, 1000)        
@@ -38,6 +46,25 @@ class Clock extends Component {
         clearInterval(c);
     }
     
+    typeChecker =() =>{
+        clearInterval(c);
+        if(this.state.break) {
+            this.setState({
+                minutes:this.state.breakLen,
+                seconds:0
+            })
+            this.startClock()
+        }
+        else {
+            this.setState({
+                minutes: this.state.sesLen,
+                seconds: 0
+            })
+            this.startClock()
+        }
+    }
+
+
     displayTime =(val) =>{
         if(val=='min') return (this.state.minutes < 10 )? `0${this.state.minutes}` : this.state.minutes
         else if(val=='sec') return (this.state.seconds < 10 )? `0${this.state.seconds}` : this.state.seconds
