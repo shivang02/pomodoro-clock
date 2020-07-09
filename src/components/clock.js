@@ -108,12 +108,12 @@ class Clock extends Component {
         let breakLen = this.state.breakLen
         let minutes= this.state.minutes
         let newSes= this.state.newSes
-        if(newSes&&(val=="ses"&&sesLen<=60)) {
+        if(newSes&&(val=="ses"&&sesLen<60)) {
             this.setState({
                 sesLen:sesLen+1,
                 minutes:minutes+1
             })
-        } else if(newSes&&(val=="break")&&breakLen<=60) {
+        } else if(newSes&&(val=="break")&&breakLen<60) {
             this.setState({
                 breakLen: breakLen + 1,
                 
