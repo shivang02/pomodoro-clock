@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+@font-face{
+ font-family:'digital-clock-font';
+ src: url('assets/digital-7.ttf');
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(45deg,#43aa8b,#64aa43,#aaa043,#aa6943);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.work-area {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  align-items: center;
+}
+
+
+.clock-view {
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.time {
+  font-family: 'digital-clock-font';
+  background-color: rgba(255, 255, 255, 0.514);
+  font-size: 3rem;
+  width: 7rem;
+  text-align: center;
+  padding: 2rem;
+}
+#min {
+  border: 0;
+  border-right: 1px solid black;
+}
+
+#sec {
+  border: 0 ;
+   border-left: 1px solid black;
+}
+
+.set-time {
+ 
+  display: flex;
+  width: fit-content;
+  flex-direction: row;
+  padding: 1rem;
+  border-radius: 3rem;
+  background-color: rgba(255, 255, 255, 0.596);
+  margin-bottom: 3rem;
+}
+
+.setting-structure {
+  display: flex;
+  flex-direction: column;
+}
+
+.setting-title {
+  
+  word-wrap: wrap;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 1.2rem;
+  padding: 0.3rem;
+}
+
+.button-container {
+  display: flex;
+  width: inherit;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0 0.7rem 0 0.7rem;
+}
+
+.button-container p {
+  margin: 1rem 0;
+}
+
+
+.button-container button {
+  background-color: white;
+  display: inline-block;
+  font-size: 1rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 1rem;
+  border: solid white;
+  margin: 1rem;
+}
+
+.control-pad {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 14rem;
+  margin: 1rem;
+  padding: 1rem;
+}
+.control-pad button {
+  width: 5rem;
+  padding: 1rem;
+ background-color: rgba(255, 255, 255, 0.596);
+ border: solid rgba(255, 255, 255, 0.596);
+  border-radius: 1rem;
+}
+
+button:hover {
+   background-color: rgb(207, 205, 205);
+   border: solid rgb(207, 205, 205);
+}
